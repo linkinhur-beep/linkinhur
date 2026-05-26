@@ -1,0 +1,4 @@
+# ZAP 스캔 규칙 설정 (테스트용 - 일부 경고 무시)
+# Rule ID	Action	Parameter	Evidence
+10015	IGNORE	(no param)	Incomplete or No Cache-control Header Set
+10096	IGNORE	(no param)	Timestamp Disclosure
