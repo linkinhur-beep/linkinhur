@@ -13,7 +13,7 @@ on:
 
 env:
   NCR_REGISTRY: kr1.registry.container.nhncloud.com
-  NCR_REGISTRY_NAME: ${{ secrets.NCR_REGISTRY_NAME }}
+  NCR_REGISTRY_NAME:test_ncr
   IMAGE_NAME: linkinhur-app
   IMAGE_TAG: ${{ github.run_number }}
 
