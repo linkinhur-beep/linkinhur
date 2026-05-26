@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 env:
-  NCR_REGISTRY: kr1.registry.container.nhncloud.com
+  NCR_REGISTRY: kr1-ncr.api.nhncloudservice.com
   NCR_REGISTRY_NAME: test_ncr
   IMAGE_NAME: linkinhur-app
   IMAGE_TAG: ${{ github.run_number }}
