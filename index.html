@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NHN Cloud 보안 파이프라인 샘플</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 48px;
+      max-width: 480px;
+      width: 90%;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: #EAF3DE;
+      color: #3B6D11;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+    p {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .status-list {
+      text-align: left;
+      background: #f5f7fa;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+    }
+    .status-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #333;
+      padding: 6px 0;
+    }
+    .dot { font-size: 16px; }
+    .version {
+      font-size: 12px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">✅ 배포 성공</div>
+    <h1>Hello, NHN Cloud!</h1>
+    <p>NHN Cloud CWPP 보안 파이프라인을<br>통해 배포된 샘플 애플리케이션입니다.</p>
+
+    <div class="status-list">
+      <div class="status-item"><span class="dot">🛡️</span> 취약점 스캔 (VA) — 통과</div>
+      <div class="status-item"><span class="dot">🔍</span> 런타임 보호 — 활성화</div>
+      <div class="status-item"><span class="dot">📁</span> 파일 무결성 (FIM) — 모니터링 중</div>
+      <div class="status-item"><span class="dot">⚙️</span> syscall 감시 — 활성화</div>
+    </div>
+
+    <div class="version">Image: my-security-registry/my-app:latest</div>
+  </div>
+</body>
+</html>
