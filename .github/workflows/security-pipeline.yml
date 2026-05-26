@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 env:
-  NCR_REGISTRY: kr1-ncr.api.nhncloudservice.com
+  NCR_REGISTRY: 34fcd306-kr1-registry.container.nhncloud.com
   NCR_REGISTRY_NAME: test_ncr
   IMAGE_NAME: linkinhur-app
   IMAGE_TAG: ${{ github.run_number }}
@@ -136,7 +136,7 @@ jobs:
           echo " 보안 파이프라인 실행 결과"
           echo "==============================="
           echo "빌드 번호 : ${{ env.IMAGE_TAG }}"
-          echo "이미지    : ${{ env.NCR_REGISTRY_NAME }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}"
+          echo "이미지    : ${{ env.NCR_REGISTRY }}/${{ env.NCR_REGISTRY_NAME }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}"
           echo ""
           echo "01 SAST           : ${{ needs.sast.result }}"
           echo "02 빌드+CVE 스캔  : ${{ needs.build-and-scan.result }}"
