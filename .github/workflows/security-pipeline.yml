@@ -55,9 +55,9 @@ jobs:
 
       - name: NCR 로그인
         run: |
-          echo "${{ secrets.NHN_PASSWORD }}" | docker login \
+          echo "${{ secrets.NHN_SECRET_KEY }}" | docker login \
             ${{ env.NCR_REGISTRY }} \
-            --username "${{ secrets.NHN_USERNAME }}" \
+            --username "${{ secrets.NHN_ACCESS_KEY }}" \
             --password-stdin
 
       - name: NCR Push
